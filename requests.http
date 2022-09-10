@@ -1,0 +1,211 @@
+
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI1MzA5MzZ9.SyEbZqhaEmE3odCQkQ4d7GoWMaRUcb-X2oJq04Tz2Aw
+# Authorization: Bearer {{jwt}}
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "first_name": "Test",
+  "last_name": "Name",
+  "email": "testname@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "caitlynn@test.com",
+  "password": "password"
+}
+
+### ---------------------------------------------------------
+
+### Habits index action
+GET http://localhost:3000/habits.json
+Authorization: Bearer {{jwt}}
+
+### Habits show action
+GET http://localhost:3000/habits/1.json
+Authorization: Bearer {{jwt}}
+
+### Habits create action
+POST http://localhost:3000/habits.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "description": "test description",
+  "start_date": "08/19/2022"
+}
+
+### Habits update action
+PATCH http://localhost:3000/habits/2.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "start_date": "08/23/2022"
+}
+
+### Habits delete action
+DELETE http://localhost:3000/habits/2
+Authorization: Bearer {{jwt}}
+
+###---------------------------------------------------------
+
+### Goals index action
+GET http://localhost:3000/goals.json
+Authorization: Bearer {{jwt}}
+
+### Goals show action
+GET http://localhost:3000/goals/1.json
+Authorization: Bearer {{jwt}}
+
+### Goals create action
+POST http://localhost:3000/goals.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "habit_id": 1,
+  "name": "test name",
+  "description": "test description",
+}
+
+### Goals update action
+PATCH http://localhost:3000/goals/4.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "name": "test name!"
+}
+
+### Goals delete action
+DELETE http://localhost:3000/goals/4
+Authorization: Bearer {{jwt}}
+
+### ---------------------------------------------------------
+
+### Tasks index action
+GET http://localhost:3000/tasks.json
+Authorization: Bearer {{jwt}}
+
+### Tasks show action
+GET http://localhost:3000/tasks/1.json
+Authorization: Bearer {{jwt}}
+
+### Tasks create action
+POST http://localhost:3000/tasks.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "goal_id": 1,
+  "name": "test name",
+  "notes": "n/a"
+}
+
+### Tasks update action
+PATCH http://localhost:3000/tasks/6.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "name": "test name!"
+}
+
+### Tasks delete action
+DELETE http://localhost:3000/tasks/6
+Authorization: Bearer {{jwt}}
+
+### ---------------------------------------------------------
+
+### Weekly Goals index action
+GET http://localhost:3000/weekly_goals.json
+Authorization: Bearer {{jwt}}
+
+### ---------------------------------------------------------
+
+### Events index action
+GET http://localhost:3000/events.json
+Authorization: Bearer {{jwt}}
+
+### Events show action
+GET http://localhost:3000/events/1.json
+Authorization: Bearer {{jwt}}
+
+### Events create action
+POST http://localhost:3000/events.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "title": "test title 3",
+  "start": "2022-09-05 10:15",
+  "end": "2022-09-12 11:15",
+
+}
+
+### Events update action
+PATCH http://localhost:3000/events/1.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "start": "2022-08-22", 
+  "end": "2022-11-22"
+}
+
+### Events delete action
+DELETE http://localhost:3000/events/1
+Authorization: Bearer {{jwt}}
+
+### ---------------------------------------------------------
+
+### Journals index action
+GET http://localhost:3000/journals.json
+Authorization: Bearer {{jwt}}
+
+### Journals show action
+GET http://localhost:3000/journals/1.json
+Authorization: Bearer {{jwt}}
+
+### Journals create action
+POST http://localhost:3000/journals.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "habit_id": 1,
+  "goal_id": 1,
+  "title": "test title",
+  "body": "test body..",
+  "date": "2022-09-05"
+
+}
+
+### Journals update action
+PATCH http://localhost:3000/journals/1.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "title": "Test Title"
+}
+
+### Journals delete action
+DELETE http://localhost:3000/journals/1
+Authorization: Bearer {{jwt}}
+
+### ---------------------------------------------------------
+
+### Active Tasks index action
+GET http://localhost:3000/active_tasks.json
+Authorization: Bearer {{jwt}}
