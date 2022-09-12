@@ -25,9 +25,12 @@ Goal.create!(user_id: 1, habit_id: 1, name: "Wake up at 7:00am", description: "W
 Goal.create!(user_id: 1, habit_id: 2, name: "Morning weightlifting!", description: "At least 45 min weightlighting gym sesh after getting up.", start_date: "2022-08-19", end_date: "2022-08-25", active: false, end_reflection_completed: true)
 Goal.create!(user_id: 1, habit_id: 1, name: "Wake up at 6:45am", description: "Will start with waking up at 6:45am every morning this week without snoozing.", start_date: "2022-08-26", end_date: "2022-09-02", active: false, end_reflection_completed: true)
 Goal.create!(user_id: 1, habit_id: 2, name: "Morning weightlifting!", description: "At least 45 min weightlighting gym sesh after getting up.", start_date: "2022-08-26", end_date: "2022-09-02", active: false, end_reflection_completed: true)
-Goal.create!(user_id: 1, habit_id: 3, name: "Read at least 1 chapter", description: "Every night before bed!", start_date: "2022-09-02", end_date: "2022-09-08", active: true, end_reflection_completed: false)
-Goal.create!(user_id: 1, habit_id: 1, name: "Wake up at 6:30am", description: "Will start with waking up at 6:45am every morning this week without snoozing.", start_date: "2022-09-03", end_date: "2022-09-09", active: true, end_reflection_completed: false)
-Goal.create!(user_id: 1, habit_id: 2, name: "Morning weightlifting!", description: "At least 45 min weightlighting gym sesh after getting up.", start_date: "2022-09-03", end_date: "2022-09-09", active: true, end_reflection_completed: false)
+Goal.create!(user_id: 1, habit_id: 3, name: "Read at least 1 chapter", description: "Every night before bed!", start_date: "2022-09-02", end_date: "2022-09-08", active: false, end_reflection_completed: true)
+Goal.create!(user_id: 1, habit_id: 1, name: "Wake up at 6:30am", description: "Will start with waking up at 6:30am every morning this week without snoozing.", start_date: "2022-09-03", end_date: "2022-09-09", active: false, end_reflection_completed: true)
+Goal.create!(user_id: 1, habit_id: 2, name: "Morning weightlifting!", description: "At least 45 min weightlighting gym sesh after getting up.", start_date: "2022-09-03", end_date: "2022-09-09", active: false, end_reflection_completed: true)
+Goal.create!(user_id: 1, habit_id: 3, name: "Read at least 1 chapter", description: "Every night before bed!", start_date: "2022-09-09", end_date: "2022-09-16", active: true, end_reflection_completed: false)
+Goal.create!(user_id: 1, habit_id: 1, name: "Wake up at 6:15am", description: "Will start with waking up at 6:15am every morning this week without snoozing.", start_date: "2022-09-10", end_date: "2022-09-17", active: true, end_reflection_completed: false)
+Goal.create!(user_id: 1, habit_id: 2, name: "Morning weightlifting!", description: "At least 45 min weightlighting gym sesh after getting up.", start_date: "2022-09-10", end_date: "2022-09-17", active: true, end_reflection_completed: false)
 
 
 
@@ -67,6 +70,9 @@ Event.create!(user_id: 1, habit_id: 3, title: "Bookworm", start: "2022-09-02", e
 Event.create!(user_id: 1, goal_id: 9, title: "Read at least 1 chapter", start: "2022-09-02", end: "2022-09-08", color: "b3")
 Event.create!(user_id: 1, goal_id: 10, title: "Wake up at 6:30am", start: "2022-09-03", end: "2022-09-09", color: "b1")
 Event.create!(user_id: 1, goal_id: 11, title: "Morning weightlifting!", start: "2022-09-03", end: "2022-09-09", color: "b2")
+Event.create!(user_id: 1, goal_id: 9, title: "Read at least 1 chapter", start: "2022-09-09", end: "2022-09-16", color: "b3")
+Event.create!(user_id: 1, goal_id: 10, title: "Wake up at 6:15am", start: "2022-09-10", end: "2022-09-17", color: "b1")
+Event.create!(user_id: 1, goal_id: 11, title: "Morning weightlifting!", start: "2022-09-10", end: "2022-09-17", color: "b2")
 
 
 Journal.create!(user_id: 1, habit_id: 1, goal_id: 1, title: "Weekly Reflection: Wake up at 8:00am", body: "This week..", date: "2022-07-28")
@@ -77,5 +83,8 @@ Journal.create!(user_id: 1, habit_id: 1, goal_id: 5, title: "Weekly Reflection: 
 Journal.create!(user_id: 1, habit_id: 2, goal_id: 6, title: "Weekly Reflection: Morning weightlifting!", body: "This week..", date: "2022-08-25")
 Journal.create!(user_id: 1, habit_id: 1, goal_id: 7, title: "Weekly Reflection: Wake up at 6:45am", body: "This week..", date: "2022-09-02")
 Journal.create!(user_id: 1, habit_id: 2, goal_id: 8, title: "Weekly Reflection: Morning weightlifting!", body: "This week..", date: "2022-09-02")
+Journal.create!(user_id: 1, habit_id: 3, goal_id: 9, title: "Weekly Reflection: Read at least 1 chapter", body: "This week..", date: "2022-09-07")
+Journal.create!(user_id: 1, habit_id: 1, goal_id: 10, title: "Weekly Reflection: Wake up at 6:30am", body: "This week..", date: "2022-09-09")
+Journal.create!(user_id: 1, habit_id: 2, goal_id: 11, title: "Weekly Reflection: Morning weightlifting!", body: "This week..", date: "2022-09-09")
 
 puts "Done!"
